@@ -10,7 +10,7 @@ while abs(respuesta**2 - objetivo) >= epsilon and respuesta <= objetivo:
     respuesta += paso
 
 total_time=time()-time_initial
-ṕ
+
 if abs(respuesta**2 - objetivo) >= epsilon:
     print(f'No se encontro la raiz cuadrada {objetivo}')
 else:
