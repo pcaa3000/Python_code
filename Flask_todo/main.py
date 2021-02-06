@@ -1,9 +1,15 @@
 from flask import request, make_response, redirect,render_template,session,url_for,flash
+import unittest
 
 from app import create_app
 from app.forms import LoginForm
 
 app=create_app()
+
+@app.cli.command()
+def test():
+    tests=unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner().run(tests)
 
 @app.route('/')
 def index():
